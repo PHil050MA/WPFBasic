@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfDay2Binding.SliderTextBoxBindingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDay2Binding"
+        mc:Ignorable="d"
+        Title="SliderTextBoxBindingWindow" Height="650" Width="800">
+    <StackPanel>
+        <StackPanel Height="100">
+            <TextBox x:Name="message"/>
+            <Label Content="{Binding ElementName=message, Path=Text}"/>
+        </StackPanel>
+        <StackPanel Height="100">
+            <TextBox x:Name="message1"/>
+            <Label  FontSize ="20" Foreground="Brown" Content="{Binding Text, ElementName=message1}"/>
+        </StackPanel>
+        <StackPanel Height="200">
+            <Slider Minimum="1" 
+                    Maximum="255" 
+                    IsSnapToTickEnabled="True" 
+                    Height="50" Width="400" 
+                    Margin="0,20,0,0" 
+                    Value="{Binding Text, ElementName=input}"
+                    x:Name="red"/>
+            <Label  Width="200" FontSize ="20" Foreground="Brown" Content="Red"/>
+            <TextBox Text="{Binding Value, ElementName=red}" Width="200" x:Name="input"/>
+        </StackPanel>
+        <StackPanel Height="200">
+            <Slider Minimum="1" 
+            Maximum="255" 
+            IsSnapToTickEnabled="True" 
+            Height="50" Width="400" 
+            Margin="0,20,0,0" 
+            x:Name="red1"/>
+            <Label  Width="200" FontSize ="20" Foreground="Brown" Content="Red1"/>
+            <TextBox Text="{Binding Value, ElementName=red1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" x:Name="input1"/>
+        </StackPanel>
+    </StackPanel>
+    
+</Window>
