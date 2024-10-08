@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfDay2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDay2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Border BorderThickness="1" Width="200" Height="100" BorderBrush="Black">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>이   름 : </TextBlock>
+                        <TextBlock Name="myTextName"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>전   화 :</TextBlock>
+                        <TextBlock Name="myTextPhone"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>나   이 :</TextBlock>
+                        <TextBlock Name="myAge"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Button Content="입력" Width="200" Height="30" Click="Button_Click"></Button>
+        </Grid>
+    </Grid>
+</Window>
