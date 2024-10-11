@@ -1,0 +1,31 @@
+﻿<Page x:Class="WpfTabControl.View.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfTabControl.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      x:Name="mainwind"
+      Title="Page1">
+
+    <Grid>
+
+        <ListView Name="memberList" FontSize="12" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Page}}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding ID}" Width="100" Margin="5"/>
+                        <TextBlock Text="{Binding Name}" Width="120" Margin="5"/>
+                        <TextBlock Text="{Binding Phone}" Width="150"  Margin="5"/>
+                        <TextBlock Text="{Binding Gender}" Width="50"  Margin="5"/>
+                        <Button Content="회원탈퇴" 
+                                Click="DeleteButton_Click" 
+                                CommandParameter="{Binding}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>            
+        </ListView>
+    </Grid>
+
+</Page>
