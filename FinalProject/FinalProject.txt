@@ -1,1 +1,5 @@
 
+프로젝트 제출 경로
+- 다음 경로에 본인의 이름 폴더에 프로젝트 폴더를 압축하여 제출하세요.
+- 압축하는 프로젝트에 bin, obj 폴더는 삭제한 후 압축하세요.
+https://drive.google.com/drive/folders/1RpUegcNF9S1M5vxqiNddZ5sCBa8UTY7n?usp=drive_link
